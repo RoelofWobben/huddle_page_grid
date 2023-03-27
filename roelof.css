@@ -1,0 +1,111 @@
+/* 
+
+***************************************************
+*                                                 *
+*      Algemeen                                   *
+*      Mobile                                     *
+*      Desktop                                    * 
+*                                                 *
+***************************************************
+
+*/
+
+/* ------------ Algemeen -------------------------- */ 
+
+:root {
+    --violet: hsl(257, 40%, 49%); 
+    --soft_magenta: hsl(300, 69%, 71%); 
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vh; 
+}
+
+
+/* --------------- Mobile ------------------------- */
+
+@media screen and (max-width: 1440px) {
+
+    .container {
+        display: grid;
+        background-color: var(--violet);
+        background-image: url("./images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        grid-template-columns:  1fr;
+        grid-template-rows: auto;
+        grid-template-areas:  
+        "header" 
+        "main"
+        "footer"
+    }
+
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px; 
+        padding-left: 50px;  
+    }
+
+    .header img {
+        width: 323px; 
+        height: 60px; 
+    }
+
+    .left {
+        background: yellow; 
+    }
+
+    .right {
+        background: blue; 
+    }
+
+    .footer {
+        background-color: aqua;
+    }
+}
+
+
+/* ------------ Desktop ------------------------ */ 
+
+
+
+@media screen and (min-width: 1440px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-auto-flow: column;  
+        grid-template-areas: 
+           "header" 
+           "main"
+           "footer" 
+    }
+
+    .header {
+        background: red;
+    }
+
+    .main {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .left {
+        background: yellow; 
+    }
+
+    .right {
+        background: blue; 
+    }
+
+    .footer {
+        background-color: aqua;
+    }
+}
+
+
