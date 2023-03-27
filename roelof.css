@@ -48,16 +48,24 @@ body {
     .header {
         padding-top: 20px;
         padding-bottom: 20px; 
-        padding-left: 50px;  
+        padding-left: 35px;  
     }
 
     .header img {
-        width: 323px; 
+        width: 130px; 
         height: 60px; 
     }
 
     .left {
-        background: yellow; 
+        height: 210px;
+        width: 375px;
+        padding-left: 30px; 
+        padding-right: 30px;   
+    }
+
+    .left img {
+        width: 295px; 
+        height: 210px; 
     }
 
     .right {
