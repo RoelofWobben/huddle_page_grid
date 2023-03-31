@@ -24,8 +24,51 @@
 }
 
 body {
-    width: 100vh; 
+    display: grid; 
+    justify-items: center;
+    width: 100vw; 
 }
+
+
+
+.icons {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 200px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+i {
+    position: relative;
+    color: white;
+    font-size: 20px;
+}
+
+i::after {
+    position: absolute;
+    content: "";
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    left: -14px;
+    bottom: -11px;
+}
+
+i:hover {
+    color: var(--soft_magenta);
+}
+
+i:hover::after {
+    border-color: var(--soft_magenta);
+}
+
+.btn:hover{
+    background-color: var(--soft_magenta);
+    color: white; 
+}
+
 
 
 /* --------------- Mobile ------------------------- */
@@ -42,13 +85,15 @@ body {
         grid-template-areas:  
         "header" 
         "main"
-        "footer"
+        "footer"; 
+        width: 375px; 
     }
 
     .header {
         padding-top: 20px;
         padding-bottom: 20px; 
-        padding-left: 35px;  
+        padding-left: 35px;
+        width: 375px;   
     }
 
     .header img {
@@ -56,25 +101,72 @@ body {
         height: 60px; 
     }
 
-    .left {
-        height: 210px;
+    .main {
+        width: 375px; 
+    }
+
+    .main1 {
+        height: 250px;
         width: 375px;
         padding-left: 30px; 
         padding-right: 30px;   
     }
 
-    .left img {
-        width: 295px; 
-        height: 210px; 
+    .main1 img {
+        padding-top:20px; 
+        width: 310px; 
+        height: 230px; 
     }
 
-    .right {
-        background: blue; 
+    .main2 {
+        width: 375px; 
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    h1 {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 600; 
+        text-align: center;
+        width: 375px;
+        margin-top: 30px;   
+    }
+
+    p{
+        color: white;
+        margin-top: 15px;
+        text-align: center;
+        width: 375px;
+        font-size: 1rem; 
+        padding-left: 25px; 
+        padding-right:25px;     
+          
+    }
+
+    .btn {
+        background: white;
+        color: var(--violet);
+        border: none;
+        padding-top: 10px; 
+        padding-bottom: 10px;
+        padding-left: 80px; 
+        padding-right: 80px;
+        margin-top: 25px;
+        border-radius: 30px;
+        font-family: 'Open Sans', sans-serif; 
+        font-weight: 400;
     }
 
     .footer {
-        background-color: aqua;
+        justify-content: flex-end;
+        align-items: center;   
     }
+
+    
+
 }
 
 
@@ -91,28 +183,77 @@ body {
         grid-template-areas: 
            "header" 
            "main"
-           "footer" 
+           "footer"; 
+        background: url('./images/bg-desktop.svg');
+        background-color: var(--violet);
     }
 
-    .header {
-        background: red;
+    .header img {
+        padding-top: 60px;
+        margin-bottom: 80px;  
+      
     }
 
     .main {
         display: grid; 
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr); 
+        margin-bottom: 75px; 
     }
 
-    .left {
-        background: yellow; 
+    .main2 {
+        width: 640px ;
+        margin-left: 40px 
+        
     }
 
-    .right {
-        background: blue; 
+    .main1 img {
+        padding-top:20px; 
+        width: 800px; 
+        height: 600px; 
+    }
+
+    h1 {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 600; 
+        text-align: left;
+        width: 640px;
+        margin-top: 30px;   
+    }
+
+    p{
+        color: white;
+        margin-top: 15px;
+        text-align: left;
+        width: 500px;
+        font-size: 1.2rem; 
+        padding-left: 0px; 
+        padding-right:15px;     
+          
+    }
+
+    .btn {
+        background: white;
+        color: var(--violet);
+        border: none;
+        padding-top: 20px; 
+        padding-bottom: 20px;
+        padding-left: 60px; 
+        padding-right: 60px;
+        margin-top: 25px;
+        border-radius: 30px;
+        font-family: 'Open Sans', sans-serif; 
+        font-weight: 400;
+        font-size: 1rem; 
     }
 
     .footer {
-        background-color: aqua;
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center;
+        padding-bottom:50px;
+        padding-right: 20px;    
     }
 }
 
